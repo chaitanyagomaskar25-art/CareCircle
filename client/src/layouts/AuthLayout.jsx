@@ -37,9 +37,9 @@ export const AuthLayout = ({
                 <HeartPulse className="w-6 h-6" />
               </div>
               <div>
-                <span className="text-xl font-extrabold tracking-tight text-slate-900">CareCircle</span>
+                <span className="text-xl font-extrabold tracking-tight text-slate-900">SeniSync</span>
                 <span className="block text-[11px] font-bold text-primary-700 uppercase tracking-widest">
-                  Elderly Care & Medication Safety
+                  Connected Care, Simplified
                 </span>
               </div>
             </div>
@@ -72,10 +72,10 @@ export const AuthLayout = ({
 
               <div>
                 <h3 className="text-2xl font-bold tracking-tight text-white mb-2">
-                  Care with Dignity, Connected Peace of Mind.
+                  Connected Care, Simplified.
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
-                  Join thousands of families, doctors, and seniors managing daily medications and emergency care on one accessible platform.
+                  Join thousands of families, doctors, and seniors managing daily medications and emergency care on one intelligent platform.
                 </p>
               </div>
 
@@ -97,7 +97,7 @@ export const AuthLayout = ({
             {/* Senior Quote / Trust Card */}
             <div className="relative z-10 p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 mt-8">
               <p className="text-xs text-slate-200 italic leading-relaxed">
-                "CareCircle gives me back my independence. The big buttons make my pills impossible to mix up, and my daughter never has to worry."
+                "SeniSync gives me back my independence. The big buttons make my pills impossible to mix up, and my daughter never has to worry."
               </p>
               <div className="flex items-center gap-2.5 mt-3">
                 <div className="w-7 h-7 rounded-full bg-emerald-400 text-slate-950 font-bold flex items-center justify-center text-xs">
@@ -115,7 +115,7 @@ export const AuthLayout = ({
 
       {/* Footer */}
       <footer className="py-4 text-center text-xs text-slate-500">
-        CareCircle Platform • Medical Grade Encryption • Respecting Senior Privacy & Autonomy
+        SeniSync Platform • Medical Grade Encryption • Respecting Senior Privacy & Autonomy
       </footer>
     </div>
   );

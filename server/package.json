@@ -12,6 +12,7 @@
     "test:meds": "node test/medication.test.js",
     "test:notif": "node test/notification.test.js",
     "test:caregiver": "node test/caregiver.test.js",
+    "test:health": "node test/healthProfile.test.js",
     "test:all": "node test/runAllTests.js"
   },
   "dependencies": {

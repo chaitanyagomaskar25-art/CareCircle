@@ -84,14 +84,25 @@ async function main() {
     const notifCode = await runTest('test/notification.test.js');
     const caregiverCode = await runTest('test/caregiver.test.js');
     const familyCode = await runTest('test/family.test.js');
+    const appointmentCode = await runTest('test/appointment.test.js');
+    const healthCode = await runTest('test/healthProfile.test.js');
 
     console.log('\n========================================================');
-    console.log(`ALL TESTS FINISHED. Exit codes: auth=${authCode}, circle=${circleCode}, meds=${medsCode}, notif=${notifCode}, caregiver=${caregiverCode}, family=${familyCode}`);
+    console.log(`ALL TESTS FINISHED. Exit codes: auth=${authCode}, circle=${circleCode}, meds=${medsCode}, notif=${notifCode}, caregiver=${caregiverCode}, family=${familyCode}, appt=${appointmentCode}, health=${healthCode}`);
     console.log('========================================================');
 
     if (serverProc) serverProc.kill('SIGTERM');
 
-    if (authCode !== 0 || circleCode !== 0 || medsCode !== 0 || notifCode !== 0 || caregiverCode !== 0 || familyCode !== 0) {
+    if (
+      authCode !== 0 ||
+      circleCode !== 0 ||
+      medsCode !== 0 ||
+      notifCode !== 0 ||
+      caregiverCode !== 0 ||
+      familyCode !== 0 ||
+      appointmentCode !== 0 ||
+      healthCode !== 0
+    ) {
       process.exit(1);
     } else {
       process.exit(0);

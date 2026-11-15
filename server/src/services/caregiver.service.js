@@ -330,12 +330,14 @@ export const recordHealthObservation = async ({
   const observation = await HealthObservation.create({
     elderlyUserId,
     recordedBy: author._id,
+    metricType: type,
     type,
     title,
     value,
     numericValue: numericValue ? Number(numericValue) : null,
     unit: unit || '',
     severity: severity || 'normal',
+    recordSource: 'manual',
     notes: notes || '',
     recordedAt: new Date(),
   });

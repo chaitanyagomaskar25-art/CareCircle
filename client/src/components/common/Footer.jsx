@@ -6,9 +6,9 @@ export const Footer = () => {
     <footer className="bg-white border-t border-slate-200 mt-auto py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
         <div className="flex items-center gap-1.5">
-          <span>CareCircle Platform</span>
+          <span>SeniSync Platform</span>
           <span>•</span>
-          <span>Production Foundation Established</span>
+          <span>Connected Care, Simplified</span>
         </div>
         <div className="flex items-center gap-1">
           <span>Architected with</span>

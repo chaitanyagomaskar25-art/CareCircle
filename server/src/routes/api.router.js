@@ -6,6 +6,8 @@ import medicationRouter from './medication.router.js';
 import notificationRouter from './notification.router.js';
 import caregiverRouter from './caregiver.router.js';
 import familyRouter from './family.router.js';
+import appointmentRouter from './appointment.router.js';
+import healthProfileRouter from './healthProfile.router.js';
 
 const apiRouter = Router();
 
@@ -30,6 +32,12 @@ apiRouter.use('/caregiver', caregiverRouter);
 // Family Member Dashboard & Activity Feed: /api/v1/family
 apiRouter.use('/family', familyRouter);
 
+// Doctor Appointment Management Module: /api/v1/appointments
+apiRouter.use('/appointments', appointmentRouter);
+
+// Health Profile & Wellness Tracking Module: /api/v1/health-profile
+apiRouter.use('/health-profile', healthProfileRouter);
+
 // Base route for API metadata
 apiRouter.get('/', (req, res) => {
   res.status(200).json({
@@ -37,7 +45,17 @@ apiRouter.get('/', (req, res) => {
     description: 'Elderly Care & Medication Management Platform',
     version: 'v1',
     status: 'active',
-    modules: ['health', 'auth', 'care-circle', 'medications', 'notifications', 'caregiver', 'family'],
+    modules: [
+      'health',
+      'auth',
+      'care-circle',
+      'medications',
+      'notifications',
+      'caregiver',
+      'family',
+      'appointments',
+      'health-profile',
+    ],
   });
 });
 

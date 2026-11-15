@@ -108,7 +108,7 @@ export const Login = () => {
 
   return (
     <AuthLayout
-      title="Sign In to CareCircle"
+      title="Sign In to SeniSync"
       subtitle="Access resident medication schedules, vital health metrics, and caregiver circles."
       badgeText="Secure Member Portal"
     >

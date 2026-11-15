@@ -3,6 +3,7 @@ import {
   checkUpcomingReminders,
   checkMissedDosesAndEscalate,
 } from '../services/notification.service.js';
+import { checkUpcomingAppointmentReminders } from '../services/appointment.service.js';
 
 let cronTask = null;
 let isJobRunning = false;
@@ -27,12 +28,20 @@ export const runReminderJob = async () => {
     // 2. Process missed doses and caregiver/family escalations
     const missedDispatched = await checkMissedDosesAndEscalate();
 
+    // 3. Process upcoming doctor appointment reminders (24h & 2h windows)
+    const appointmentsDispatched = await checkUpcomingAppointmentReminders();
+
     const duration = Date.now() - startTime;
-    if (upcomingDispatched.length > 0 || missedDispatched.length > 0) {
+    if (
+      upcomingDispatched.length > 0 ||
+      missedDispatched.length > 0 ||
+      appointmentsDispatched.length > 0
+    ) {
       console.log(
         `[ReminderCron] Cycle completed in ${duration}ms: ` +
-        `${upcomingDispatched.length} upcoming reminders, ` +
-        `${missedDispatched.length} missed/escalation alerts.`
+        `${upcomingDispatched.length} upcoming med reminders, ` +
+        `${missedDispatched.length} missed/escalation alerts, ` +
+        `${appointmentsDispatched.length} appointment reminders.`
       );
     }
 
@@ -40,6 +49,7 @@ export const runReminderJob = async () => {
       success: true,
       upcomingCount: upcomingDispatched.length,
       missedCount: missedDispatched.length,
+      appointmentCount: appointmentsDispatched.length,
       durationMs: duration,
     };
   } catch (err) {

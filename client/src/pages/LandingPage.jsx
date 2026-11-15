@@ -41,10 +41,10 @@ export const LandingPage = () => {
             </div>
             <div>
               <span className="text-xl font-extrabold tracking-tight text-slate-900 block leading-tight">
-                CareCircle
+                SeniSync
               </span>
               <span className="text-[10px] font-bold text-primary-700 uppercase tracking-widest block">
-                Elderly Care & Medication Platform
+                Connected Care, Simplified
               </span>
             </div>
           </Link>
@@ -156,18 +156,18 @@ export const LandingPage = () => {
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-100 text-primary-900 text-xs font-bold border border-primary-200">
               <ShieldCheck className="w-4 h-4 text-primary-700" />
-              <span>Production-Ready Elderly Care & Medication Management</span>
+              <span>SeniSync – Intelligent Elderly Care & Medication Management</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
-              Dignified Independence for Seniors.{' '}
+              Connected Care, Simplified.{' '}
               <span className="text-primary-700 block mt-1">
-                Complete Peace of Mind for Families.
+                Dignified Independence for Seniors.
               </span>
             </h1>
 
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              CareCircle bridges the gap between elderly loved ones, family members, and medical doctors. Experience seamless medication adherence schedules, zero-confusion senior screens, and instant real-time caregiver push alerts.
+              SeniSync is an intelligent, interconnected healthcare ecosystem that helps elderly individuals manage medications, appointments and daily wellness while enabling authorized family members and caregivers to collaborate through a secure shared-care platform.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
@@ -179,7 +179,7 @@ export const LandingPage = () => {
                   iconPosition="right"
                   className="w-full sm:w-auto text-base shadow-lg shadow-primary-700/25"
                 >
-                  Create Your Free Circle
+                  Get Started with SeniSync
                 </Button>
               </Link>
               <Link to="/login" className="w-full sm:w-auto">
@@ -275,7 +275,7 @@ export const LandingPage = () => {
               One Connected Circle, Zero Blind Spots
             </h2>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              CareCircle links the essential pillars of senior healthcare into a continuous, synchronized loop of medication safety and emergency readiness.
+              SeniSync links the essential pillars of senior healthcare into a continuous, synchronized loop of medication safety, daily wellness, and emergency readiness.
             </p>
           </div>
 
@@ -459,9 +459,9 @@ export const LandingPage = () => {
               <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center">
                 <Bell className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900">Automated Escalation Cron</h3>
+              <h3 className="text-xl font-bold text-slate-900">Automated Escalation Engine</h3>
               <p className="text-sm text-slate-500 leading-relaxed">
-                If a morning dose isn't logged within 30 minutes, CareCircle automatically triggers a friendly voice reminder and notifies family contacts.
+                If a scheduled dose isn't logged within 30 minutes, SeniSync automatically triggers a gentle voice reminder and alerts designated family members.
               </p>
             </div>
 
@@ -488,7 +488,7 @@ export const LandingPage = () => {
         </div>
       </section>
 
-      {/* 5. How CareCircle Works */}
+      {/* 5. How SeniSync Works */}
       <section id="how-it-works" className="py-20 px-4 sm:px-8 bg-white border-y border-slate-200/80">
         <div className="max-w-7xl mx-auto space-y-14">
           <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -634,7 +634,7 @@ export const LandingPage = () => {
               Your Family's Health Data is Strictly Protected
             </h2>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              We know how sensitive medical data is. CareCircle applies zero-trust role-based access controls, automatic session invalidation, and end-to-end data encryption. Only invited circle members can view resident logs.
+              We know how sensitive medical data is. SeniSync applies zero-trust role-based access controls, automatic session invalidation, and end-to-end data encryption. Only authorized care network members can view resident logs.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-slate-200">
               <div className="flex items-center gap-2">
@@ -665,7 +665,7 @@ export const LandingPage = () => {
             Give Your Loved One the Gift of Safe, Connected Care.
           </h2>
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Join families who have eliminated medication stress. Set up your first Care Circle in under 5 minutes today.
+            Join families who have eliminated medication stress. Set up your first SeniSync care network in under 5 minutes today.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Link to="/register" className="w-full sm:w-auto">
@@ -676,7 +676,7 @@ export const LandingPage = () => {
                 iconPosition="right"
                 className="w-full sm:w-auto text-base px-8 py-4 shadow-xl shadow-primary-700/25"
               >
-                Create Free CareCircle
+                Create Free SeniSync Account
               </Button>
             </Link>
             <Link to="/login" className="w-full sm:w-auto">
@@ -700,10 +700,10 @@ export const LandingPage = () => {
               <div className="w-8 h-8 rounded-xl bg-primary-700 text-white flex items-center justify-center">
                 <HeartPulse className="w-5 h-5" />
               </div>
-              <span className="font-extrabold text-lg text-slate-900">CareCircle</span>
+              <span className="font-extrabold text-lg text-slate-900">SeniSync</span>
             </div>
             <p className="text-xs text-slate-500 leading-relaxed">
-              Elderly care and medication adherence platform engineered for dignity, safety, and continuous family coordination.
+              SeniSync – Intelligent Elderly Care & Medication Management Platform. Connected Care, Simplified.
             </p>
           </div>
 
@@ -721,7 +721,7 @@ export const LandingPage = () => {
             <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3">Authentication</h4>
             <ul className="space-y-2 text-xs text-slate-600">
               <li><Link to="/login" className="hover:text-primary-800">Resident / Family Sign In</Link></li>
-              <li><Link to="/register" className="hover:text-primary-800">Register New Circle</Link></li>
+              <li><Link to="/register" className="hover:text-primary-800">Register New Account</Link></li>
               <li><Link to="/forgot-password" className="hover:text-primary-800">Password Recovery</Link></li>
               <li><Link to="/verify-email" className="hover:text-primary-800">Email Verification</Link></li>
             </ul>
@@ -730,13 +730,13 @@ export const LandingPage = () => {
           <div>
             <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3">Medical Disclaimer</h4>
             <p className="text-[11px] text-slate-500 leading-relaxed">
-              CareCircle is a supportive coordination tool and does not provide direct medical diagnosis. For life-threatening emergencies, immediately dial 911.
+              SeniSync is a supportive coordination tool and does not provide direct medical diagnosis. For life-threatening emergencies, immediately dial 911.
             </p>
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} CareCircle Platform. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} SeniSync Platform. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a href="#terms" className="hover:text-slate-800">Terms of Service</a>
             <a href="#privacy" className="hover:text-slate-800">Privacy Policy</a>

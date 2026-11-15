@@ -14,13 +14,13 @@ export const Header = ({ isHealthy = true, environment = 'development' }) => {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-xl font-bold tracking-tight text-slate-900">CareCircle</span>
+                <span className="text-xl font-bold tracking-tight text-slate-900">SeniSync</span>
                 <span className="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">
                   v1.0
                 </span>
               </div>
               <p className="text-xs text-slate-500 hidden sm:block">
-                Elderly Care & Medication Management Platform
+                Intelligent Elderly Care & Medication Management Platform
               </p>
             </div>
           </div>

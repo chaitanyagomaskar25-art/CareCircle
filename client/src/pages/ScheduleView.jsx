@@ -17,11 +17,13 @@ import Button from '../components/common/Button.jsx';
 import StatusBadge from '../components/feedback/StatusBadge.jsx';
 import ConfirmDoseModal from '../components/medications/ConfirmDoseModal.jsx';
 import SkipDoseModal from '../components/medications/SkipDoseModal.jsx';
+import AppointmentsView from './AppointmentsView.jsx';
 import { getTodaySchedule } from '../services/medication.service.js';
 import { useToast } from '../context/ToastContext.jsx';
 
 export const ScheduleView = () => {
   const { success, warning } = useToast();
+  const [scheduleMode, setScheduleMode] = useState('appointments'); // 'appointments' | 'medication_routine'
   const [scheduleDoses, setScheduleDoses] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -92,35 +94,65 @@ export const ScheduleView = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-black text-slate-900 tracking-tight">Daily Care Schedule</h1>
-          <p className="text-sm text-slate-500 mt-0.5">
-            Real-time chronological timeline of medication doses, nurse check-ins, and doctor appointments
-          </p>
-        </div>
-        <Button
-          variant="outline"
-          icon={RefreshCw}
-          onClick={loadSchedule}
-          size="sm"
+      {/* Top Mode Selector Tabs */}
+      <div className="flex items-center gap-2 border-b border-slate-200 pb-2 overflow-x-auto text-xs">
+        <button
+          type="button"
+          onClick={() => setScheduleMode('appointments')}
+          className={`px-4 py-2.5 font-bold rounded-xl transition-all whitespace-nowrap ${
+            scheduleMode === 'appointments'
+              ? 'bg-teal-700 text-white shadow-sm'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+          }`}
         >
-          Refresh Schedule
-        </Button>
+          🩺 Doctor Appointments & Calendar
+        </button>
+        <button
+          type="button"
+          onClick={() => setScheduleMode('medication_routine')}
+          className={`px-4 py-2.5 font-bold rounded-xl transition-all whitespace-nowrap ${
+            scheduleMode === 'medication_routine'
+              ? 'bg-teal-700 text-white shadow-sm'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+          }`}
+        >
+          💊 Daily Medication Timeline & Routine
+        </button>
       </div>
 
-      {/* Main Schedule Timeline */}
-      <Card>
-        <div className="relative pl-6 space-y-7 before:absolute before:left-2.5 before:top-3 before:bottom-3 before:w-0.5 before:bg-slate-200">
-          {combinedTimeline.map((evt) => {
-            const isTaken = evt.status === 'taken' || evt.status === 'completed';
-            const isSkipped = evt.status === 'skipped';
-            const isPending = evt.status === 'pending' || evt.status === 'upcoming';
+      {scheduleMode === 'appointments' ? (
+        <AppointmentsView />
+      ) : (
+        <>
+          {/* Header */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <h1 className="text-2xl font-black text-slate-900 tracking-tight">Daily Care Schedule</h1>
+              <p className="text-sm text-slate-500 mt-0.5">
+                Real-time chronological timeline of medication doses, nurse check-ins, and daily routines
+              </p>
+            </div>
+            <Button
+              variant="outline"
+              icon={RefreshCw}
+              onClick={loadSchedule}
+              size="sm"
+            >
+              Refresh Schedule
+            </Button>
+          </div>
 
-            return (
-              <div key={evt.id} className="relative flex items-start gap-4">
-                {/* Status Dot on Line */}
+          {/* Main Schedule Timeline */}
+          <Card>
+            <div className="relative pl-6 space-y-7 before:absolute before:left-2.5 before:top-3 before:bottom-3 before:w-0.5 before:bg-slate-200">
+              {combinedTimeline.map((evt) => {
+                const isTaken = evt.status === 'taken' || evt.status === 'completed';
+                const isSkipped = evt.status === 'skipped';
+                const isPending = evt.status === 'pending' || evt.status === 'upcoming';
+
+                return (
+                  <div key={evt.id} className="relative flex items-start gap-4">
+                    {/* Status Dot on Line */}
                 <span
                   className={`
                     absolute -left-6 top-1.5 w-5 h-5 rounded-full border-4 border-white

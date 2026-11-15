@@ -34,7 +34,7 @@ export const Sidebar = ({ isOpen, onClose, currentTab, onSelectTab }) => {
     { id: 'family', label: 'Family Support Hub', icon: Heart },
     { id: 'medications', label: 'Medications & Pills', icon: Pill, badge: '1 Due' },
     { id: 'circle', label: 'Care Circle Team', icon: Users, badge: '4' },
-    { id: 'vitals', label: 'Health Vitals & Logs', icon: Activity },
+    { id: 'vitals', label: 'Health Profile & Vitals', icon: Activity },
     { id: 'schedule', label: 'Daily Schedule', icon: Calendar },
     { id: 'notifications', label: 'Alerts & Notifications', icon: Bell },
   ];
@@ -66,9 +66,9 @@ export const Sidebar = ({ isOpen, onClose, currentTab, onSelectTab }) => {
                 <HeartPulse className="w-6 h-6" />
               </div>
               <div>
-                <h1 className="text-lg font-bold tracking-tight text-slate-900">CareCircle</h1>
+                <h1 className="text-lg font-bold tracking-tight text-slate-900">SeniSync</h1>
                 <p className="text-xs text-primary-700 font-semibold tracking-wide uppercase">
-                  Elderly Care Platform
+                  Connected Care, Simplified
                 </p>
               </div>
             </div>
